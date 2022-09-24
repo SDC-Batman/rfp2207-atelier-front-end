@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import Ratings from "./Ratings/RatingsOverview.jsx";
 import ReviewList from "./Reviews/ReviewList.jsx";
-import { config } from "../../../../env/config.js";
+// import { config } from "../../../../env/config.js";
 import axios from "axios";
 import RatingsOverview from "./Ratings/RatingsOverview.jsx";
 import styled from "styled-components";
 import { ClickTracker } from "../App.jsx";
+
+const config = {
+  baseURL: "http://54.162.76.39",
+};
 
 const Ratings_Reviews = (props) => {
   const clickTracker = useContext(ClickTracker);

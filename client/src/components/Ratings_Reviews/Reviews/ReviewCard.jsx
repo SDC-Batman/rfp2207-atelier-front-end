@@ -3,7 +3,7 @@ import Stars from '../Stars.jsx'
 import { parseISO } from "date-fns";
 import { FaStar, FaCheck } from 'react-icons/fa';
 import axios from "axios";
-import {config} from "../../../../../env/config.js";
+// import {config} from "../../../../../env/config.js";
 import styled from "styled-components";
 import {
   ModalClose,
@@ -11,6 +11,10 @@ import {
   Modal,
   ModalOverlay,
 } from "../../../styleComponents.jsx";
+
+const config = {
+  baseURL: "http://54.162.76.39",
+};
 
 const ReviewCard = ({ review, helpfullClicks, setHelpfullClicks}) => {
   const [helpfullness, setHelpfullness] = useState(review.helpfulness)
